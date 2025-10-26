@@ -25,4 +25,4 @@ public class Triangle {
 		double eps = 1e-9;
 		return Math.abs(dAB - dBC) < eps && Math.abs(dBC - dCA) < eps;
 	}
-}
+} 
