@@ -24,4 +24,15 @@ public class Square {
 		double side = A.distance(B);
 	    return side * side;
 	}
+	
+	public boolean isSquare() {
+        double sideAB = A.distance(B);
+        double sideBC = B.distance(C);
+        double sideCD = C.distance(D);
+        double sideDA = D.distance(A);
+        double eps = 1e-9;
+        return Math.abs(sideAB - sideBC) < eps &&
+               Math.abs(sideBC - sideCD) < eps &&
+               Math.abs(sideCD - sideDA) < eps;
+    }
 }
